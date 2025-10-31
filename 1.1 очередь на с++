@@ -1,0 +1,22 @@
+#include <iostream>
+#include <queue> // стандартная очередь
+
+int main() {
+    std::queue<int> q; // создаем очередь
+
+    // Добавление элементов (push = вставка в конец)
+    q.push(10);
+    q.push(20);
+    q.push(30);
+
+    std::cout << "Первый элемент: " << q.front() << std::endl; // 10
+
+    // Удаление первого элемента
+    q.pop();
+    std::cout << "Теперь первый элемент: " << q.front() << std::endl; // 20
+
+    // Проверка на пустоту
+    std::cout << "Очередь пуста? " << (q.empty() ? "Да" : "Нет") << std::endl;
+
+    return 0;
+}

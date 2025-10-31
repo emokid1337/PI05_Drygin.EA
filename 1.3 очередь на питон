@@ -1,0 +1,18 @@
+from collections import deque
+
+# Очередь на deque (двусторонняя очередь)
+queue = deque()
+
+# Добавление элементов (append)
+queue.append(10)
+queue.append(20)
+queue.append(30)
+
+print("Первый элемент:", queue[0])  # 10
+
+# Удаление первого элемента (popleft)
+print("Удалён:", queue.popleft())   # 10
+print("Теперь первый:", queue[0])   # 20
+
+# Проверка на пустоту
+print("Очередь пуста?", len(queue) == 0)

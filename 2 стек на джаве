@@ -1,0 +1,29 @@
+class MyStack {
+    private int[] arr; // массив для хранения элементов
+    private int top = -1; // индекс верхушки стека (-1 = стек пуст)
+
+    // Конструктор, задаем размер стека
+    MyStack(int size) { 
+        arr = new int[size]; 
+    }
+
+    // Добавление элемента в стек
+    void push(int x) { 
+        arr[++top] = x; 
+    }
+
+    // Удаление элемента с вершины стека
+    int pop() { 
+        return arr[top--]; 
+    }
+
+    // Просмотр верхнего элемента без удаления
+    int peek() { 
+        return arr[top]; 
+    }
+
+    // Проверка на пустоту
+    boolean isEmpty() { 
+        return top < 0; 
+    }
+}

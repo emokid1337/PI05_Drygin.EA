@@ -1,0 +1,23 @@
+#include <iostream>
+#include <stack> // стандартный стек
+
+int main() {
+    std::stack<int> st; // создаем стек для целых чисел
+
+    // Добавление элементов (push)
+    st.push(10);
+    st.push(20);
+    st.push(30);
+
+    // Просмотр верхнего элемента (top)
+    std::cout << "Верхний элемент: " << st.top() << std::endl; // 30
+
+    // Удаление элемента (pop)
+    st.pop();
+    std::cout << "После pop верхний элемент: " << st.top() << std::endl; // 20
+
+    // Проверка на пустоту
+    std::cout << "Стек пуст? " << (st.empty() ? "Да" : "Нет") << std::endl;
+
+    return 0;
+}

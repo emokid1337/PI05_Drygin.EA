@@ -1,0 +1,28 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class Main {
+    public static void main(String[] args) {
+        // Создаем очередь (реализована через LinkedList)
+        Queue<Integer> queue = new LinkedList<>();
+
+        // Добавляем элементы в очередь (offer = вставка в конец)
+        queue.offer(10);
+        queue.offer(20);
+        queue.offer(30);
+
+        System.out.println("Очередь: " + queue); // [10, 20, 30]
+
+        // Просмотр первого элемента без удаления (peek)
+        System.out.println("Первый элемент: " + queue.peek()); // 10
+
+        // Извлечение элемента из начала (poll)
+        System.out.println("Удалён: " + queue.poll()); // 10
+
+        // Очередь после удаления
+        System.out.println("Очередь после poll: " + queue); // [20, 30]
+
+        // Проверяем, пуста ли очередь
+        System.out.println("Очередь пуста? " + queue.isEmpty());
+    }
+}
